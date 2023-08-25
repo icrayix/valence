@@ -2,6 +2,7 @@
 base_url = "/"
 
 title = "Valence - A Minecraft server framework"
+description = "A Rust framework for building Minecraft servers."
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true

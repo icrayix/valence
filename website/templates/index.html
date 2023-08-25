@@ -8,6 +8,27 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+
+    {%- if page %}
+      {%- set resource = page %}
+    {%- elif section %}
+      {%- set resource = section %}
+    {%- endif %}
+
+    <!-- HTML Meta Tags -->
+    <meta name="description" content="{{ config.description }}">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Valence">
+    <meta property="og:url" content="{{ resource.permalink }}">
+    <meta property="og:title" content="{{ resource.title }}">
+    <meta property="og:description" content="{{ config.description }}">
+    <meta property="og:image" content="https://raw.githubusercontent.com/valence-rs/valence/main/assets/logo-256x256.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary">
+
     {% block favicon %}
     <link rel="icon" href="{{ config.base_url }}favicon.ico" />
     {% endblock favicon %} {% include "_variables.html" %} {% block fonts %}
