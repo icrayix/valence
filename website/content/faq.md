@@ -1,7 +1,7 @@
 +++
 title = "FAQ"
 description = "Frequently Asked Questions"
-weight = 4
+weight = 2
 +++
 
 # Can I use Valence as a replacement for a Vanilla Minecraft Server?

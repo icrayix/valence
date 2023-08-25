@@ -20,8 +20,8 @@ highlight_themes_css = [{ theme = "one-dark", filename = "syntax-theme.css" }]
 
 [extra]
 juice_extra_menu = [
-  { title = "Discord", link = "https://discord.gg/8Fqqy9XrYb" },
   { title = "GitHub", link = "https://github.com/valence-rs/valence" },
+  { title = "Discord", link = "https://discord.gg/8Fqqy9XrYb" },
 ]
 
 juice_logo_name = "Valence"
