@@ -1,5 +1,5 @@
 {% import "_macros.html" as macros %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ lang }}">
   <head>
     <meta charset="UTF-8" />
@@ -16,18 +16,21 @@
     {%- endif %}
 
     <!-- HTML Meta Tags -->
-    <meta name="description" content="{{ config.description }}">
+    <meta name="description" content="{{ config.description }}" />
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Valence">
-    <meta property="og:url" content="{{ resource.permalink }}">
-    <meta property="og:title" content="{{ resource.title }}">
-    <meta property="og:description" content="{{ config.description }}">
-    <meta property="og:image" content="https://raw.githubusercontent.com/valence-rs/valence/main/assets/logo-256x256.png">
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Valence" />
+    <meta property="og:url" content="{{ resource.permalink }}" />
+    <meta property="og:title" content="{{ resource.title }}" />
+    <meta property="og:description" content="{{ config.description }}" />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/valence-rs/valence/main/assets/logo-256x256.png"
+    />
 
     <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary" />
 
     {% block favicon %}
     <link rel="icon" href="{{ config.base_url }}favicon.ico" />
@@ -39,32 +42,28 @@
     <link
       href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap"
       rel="stylesheet"
-  />
-  {% endblock fonts %}
-  <link rel="stylesheet" href="{{ get_url(path="prism.css") }}" />
-  <link rel="stylesheet" href="{{ get_url(path="normalize.css") }}" />
-  <link rel="stylesheet" href="{{ get_url(path="site.css") }}" />
-  <link rel="stylesheet" href="{{ get_url(path="syntax-theme.css") }}" />
-</head>
-<body>
-  {% block header %}
+    />
+    {% endblock fonts %}
+    <link rel="stylesheet" href="{{ get_url(path="prism.css") }}" />
+    <link rel="stylesheet" href="{{ get_url(path="normalize.css") }}" />
+    <link rel="stylesheet" href="{{ get_url(path="site.css") }}" />
+    <link rel="stylesheet" href="{{ get_url(path="syntax-theme.css") }}" />
+  </head>
+  <body>
+    {% block header %}
 
-  <header>
-    {{ macros::render_header() }}
-  </header>
+    <header>{{ macros::render_header() }}</header>
 
-  <div class="hero">
-    {% block hero %}
+    <div class="hero">
+      {% block hero %}
       <script async defer src="https://buttons.github.io/buttons.js"></script>
       <section class="text-center">
-        <h1
-          id="heading"
-          class="heading-text"
-        >
+        <h1 id="heading" class="heading-text">
           Minecraft servers for the modern age
         </h1>
         <h3 id="subheading" class="title-text">
-          Valence is a Rust framework for building modular and high performance Minecraft servers.
+          Valence is a Rust framework for building modular and high performance
+          Minecraft servers.
         </h3>
         <div>
           <a href="https://github.com/valence-rs/valence"
@@ -94,9 +93,7 @@
       </section>
       <script src="prism.js"></script>
       <div class="hero-code">
-        <pre
-          data-file="main.rs"
-        ><code class="language-rust">
+        <pre data-file="main.rs"><code class="language-rust">
 fn pause_on_crouch(
     mut events: EventReader&ltSneakEvent&gt,
     mut board: ResMut&ltLifeBoard&gt,
