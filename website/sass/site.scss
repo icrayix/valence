@@ -30,7 +30,7 @@ p > img {
 }
 
 header {
-  background-color: var(--primary-color);
+  background-color: transparent;
   color: var(--primary-text-color);
   padding: 20px 50px;
   display: flex;
@@ -82,15 +82,28 @@ header {
   }
 }
 
-  // only apply this when the screen is small
-  @media screen and (min-width: 1300px) {
-    .hero {
-      flex-wrap: nowrap
+// only apply this when the screen is small
+@media screen and (min-width: 1300px) {
+  .hero {
+    flex-wrap: nowrap;
   }
 }
 
 .hero-code {
   position: relative;
+}
+
+#heading {
+  font-size: 50px;
+  color: var(--header-text-color);
+  font-weight: 900;
+  letter-spacing: 0.4px;
+}
+
+#subheading {
+  color: #c87b07;
+  font-weight: 100;
+  letter-spacing: 0.3px;
 }
 
 main {
@@ -214,4 +227,31 @@ footer > small * {
   .toc {
     display: none;
   }
+}
+
+.hero section {
+  padding: 0 5rem;
+}
+
+.badge {
+  height: 23px;
+  margin: 0.1rem;
+}
+
+.button {
+  display: inline-block;
+  width: 15rem;
+  margin: 2rem;
+  background-color: var(--header-text-color);
+  border-radius: 10px;
+  color: var(--primary-color);
+  border: none;
+  line-height: 1.7;
+  cursor: pointer;
+  opacity: 1;
+  transition: all ease-out 0.15s;
+}
+
+.button:hover {
+  opacity: 0.9;
 }

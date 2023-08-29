@@ -43,13 +43,13 @@
   {% endblock fonts %}
   <link rel="stylesheet" href="{{ get_url(path="prism.css") }}" />
   <link rel="stylesheet" href="{{ get_url(path="normalize.css") }}" />
-  <link rel="stylesheet" href="{{ get_url(path="juice.css") }}" />
+  <link rel="stylesheet" href="{{ get_url(path="site.css") }}" />
   <link rel="stylesheet" href="{{ get_url(path="syntax-theme.css") }}" />
 </head>
 <body>
   {% block header %}
 
-  <header style="background-color: transparent;">
+  <header>
     {{ macros::render_header() }}
   </header>
 
@@ -58,12 +58,12 @@
       <script async defer src="https://buttons.github.io/buttons.js"></script>
       <section class="text-center">
         <h1
+          id="heading"
           class="heading-text"
-          style="font-size: 50px; color: var(--header-text-color); font-weight: 900; letter-spacing: .4px;"
         >
           Minecraft servers for the modern age
         </h1>
-        <h3 class="title-text" style="color: #c87b07; font-weight: 100; letter-spacing: .3px;">
+        <h3 id="subheading" class="title-text">
           Valence is a Rust framework for building modular and high performance Minecraft servers.
         </h3>
         <div>
@@ -117,35 +117,6 @@ fn pause_on_crouch(
     }
 }</code></pre>
       </div>
-
-      <style>
-        .hero section {
-          padding: 0 5rem;
-        }
-
-        .badge {
-          height: 23px;
-          margin: 0.1rem;
-        }
-
-        .button {
-          display: inline-block;
-          width: 15rem;
-          margin: 2rem;
-          background-color: var(--header-text-color);
-          border-radius: 10px;
-          color: var(--primary-color);
-          border: none;
-          line-height: 1.7;
-          cursor: pointer;
-          opacity: 1;
-          transition: all ease-out 0.15s;
-        }
-
-        .button:hover {
-          opacity: 0.9;
-        }
-      </style>
       {% endblock hero %}
     </div>
 
